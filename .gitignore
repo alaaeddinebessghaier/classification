@@ -1,4 +1,22 @@
-classification/      # ignore le venv
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+classification/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Data and models (optional: large files)
+uploads/
+*.pkl
+data/
+
+# OS
+.DS_Store
+Thumbs.db

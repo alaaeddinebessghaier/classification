@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Classification Multi-Personnes</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+<h1>Classification Multi-Personnes</h1>
+<p>Uploader une image contenant enfants, adultes et personnes âgées</p>
+
+<form method="post" enctype="multipart/form-data">
+<input type="file" name="file" accept="image/*" required>
+<button type="submit">Classifier</button>
+</form>
+
+{% if prediction %}
+<div class="result">
+<h2>Résultat : {{ prediction }}</h2>
+{% if img_url %}
+<img src="{{ img_url }}" alt="Image annotée">
+{% endif %}
+</div>
+{% endif %}
+</div>
+</body>
+</html>
